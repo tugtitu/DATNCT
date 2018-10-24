@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".avtivity.UpdateInformationStaffActivity">
+
+    <RelativeLayout
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView android:id="@+id/image_clock"
+            android:src="@drawable/icon_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:layout_alignParentEnd="true"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_title_handling_staff"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/image_clock"
+            android:layout_alignParentStart="true"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/green_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input_name_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/msg_staff_name"
+                    android:lines="1"
+
+                    android:textColor="@color/black"
+                    android:inputType="text|textAutoCorrect|textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input_email_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/prompt_email"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:inputType="textEmailAddress|textAutoCorrect|textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input_phone_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/msg_phone_number"
+                    android:lines="1"
+                    android:maxEms="11"
+                    android:minEms="9"
+                    android:textColor="@color/black"
+                    android:inputType="phone|textAutoCorrect|textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input_address_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/msg_address"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:inputType="textPostalAddress|textAutoCorrect|textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:text="@string/msg_role"
+                android:textSize="@dimen/sp24"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:checkedButton="@id/radio_manage"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radio_manage"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_manage" />
+                <RadioButton
+                    android:id="@+id/radio_cashier"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_cashier" />
+                <RadioButton
+                    android:id="@+id/radio_serve"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_serve" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp20"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border">
+
+                <TextView
+                    android:text="@string/msg_working_time"
+                    android:textAlignment="textStart"
+                    android:layout_toStartOf="@id/text_choose_working_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView android:id="@+id/text_choose_working_hours"
+                    android:text="@string/msg_choose_working_hours"
+                    android:textColor="#fd6b09"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout android:id="@+id/linear_time_work"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_below="@id/text_choose_working_hours"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:id="@+id/text_weekdays"
+                        android:textAlignment="textStart"
+                        android:layout_weight="7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView android:id="@+id/text_time_work"
+                        android:textAlignment="textEnd"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp30"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="ButtonStyle">
+
+                <Button android:id="@+id/btn_confirm"
+                    android:text="@string/action_ok"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_item_press_abacus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_toStartOf="@id/btn_change_password" />
+
+                <Button android:id="@+id/btn_change_password"
+                    android:text="@string/action_change_password"
+                    android:textAllCaps="false"
+                    android:paddingStart="@dimen/dp20"
+                    android:paddingEnd="@dimen/dp20"
+                    android:background="@drawable/custom_item_press_abacus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

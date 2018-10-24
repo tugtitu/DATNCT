@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="text_1">#00736d</color>
+    <color name="pink">#eaff0099</color>
+    <color name="pink_dark">#ff0099</color>
+    <color name="bg_toolbar_main">#92d905</color>
+    <color name="green">#02ac46</color>
+    <color name="white">#fff</color>
+    <color name="black">#3d3b3b</color>
+    <color name="orange">#ffb300</color>
+    <color name="grey">#867e7e</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="color_primary_dark">#0287C3</color>
+    <color name="light_green">#00c8ff</color>
+    <color name="red">#d32f2f</color>
+    <color name="grey_dark">#363636</color>
+    <color name="green_dark">#00702d</color>
+    <color name="dark_orange">#ff6016</color>
+    <color name="light_gray">#f9f8f8</color>
+    <color name="color_primary">#20e9cb</color>
+    <color name="color_secondary">#00debc</color>
+    <color name="text_color_primary">#ffffff</color>
+</resources>

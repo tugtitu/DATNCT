@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item android:id="@+id/item_reboot" android:title="@string/nav_sync_data" android:icon="@drawable/reset" app:showAsAction="always"
+            tools:ignore="AlwaysShowAction" />
+
+        <item android:id="@+id/item_root_list"
+            android:title=""
+            android:visible="false"
+            android:icon="@drawable/list_32"
+            app:showAsAction="always">
+            <menu>
+                <item
+                    android:id="@+id/item_cancel"
+                    android:icon="@drawable/cancel_32"
+                    android:title="@string/action_cancel_order" />
+                <item
+                    android:id="@+id/item_create"
+                    android:icon="@drawable/create_32"
+                    android:title="@string/action_create_order" />
+                <item
+                    android:id="@+id/item_print"
+                    android:icon="@drawable/printer_color"
+                    android:title="@string/action_print_kitchen" />
+            </menu>
+        </item>
+    </group>
+</menu>

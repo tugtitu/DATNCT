@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/linear_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/payment_progress"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle" />
+
+    <LinearLayout android:id="@+id/payment_form"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_title_payment"
+            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <LinearLayout android:id="@+id/linear_payment"
+            android:weightSum="6"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:elevation="@dimen/dp100"
+                android:background="@drawable/bg_payment_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp10"
+                    android:elevation="@dimen/dp100"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edit_current_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:background="@color/transparent"
+                        android:hint="@string/msg_current_total"
+                        android:paddingStart="@dimen/dp10"
+                        android:cursorVisible="false"
+                        android:inputType="numberDecimal"
+                        android:textStyle="bold" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp10"
+                    android:elevation="@dimen/dp100"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/edit_into_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:hint="@string/msg_into_money"
+                        android:paddingStart="@dimen/dp10"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:background="@color/transparent"
+                        android:cursorVisible="false"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/green"
+                        android:textStyle="bold" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="5"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:weightSum="5"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_edit_no_input_payment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_weight="1"
+                        android:elevation="@dimen/dp50"
+                        android:background="@drawable/bg_edit_input_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" >
+
+                        <EditText
+                            android:id="@+id/edit_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/msg_discount"
+                            android:paddingStart="@dimen/dp10"
+                            android:onClick="onClickEditText"
+                            android:focusable="false"
+                            android:background="@color/transparent"
+                            android:textColor="@color/green"
+                            android:cursorVisible="false"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_weight="1"
+                        android:elevation="@dimen/dp50"
+                        android:background="@drawable/bg_edit_input_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" >
+
+                        <EditText
+                            android:id="@+id/edit_surcharge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/msg_surcharge"
+                            android:paddingStart="@dimen/dp10"
+                            android:onClick="onClickEditText"
+                            android:focusable="false"
+                            android:background="@color/transparent"
+                            android:textColor="@color/red"
+                            android:cursorVisible="false"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_weight="1"
+                        android:background="#6cffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" >
+
+                        <EditText
+                            android:id="@+id/edit_cash"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/msg_cash"
+                            android:paddingStart="@dimen/dp10"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:textColor="@color/green"
+                            android:cursorVisible="false"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_weight="1"
+                        android:background="#6affffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" >
+
+                        <EditText
+                            android:id="@+id/edit_change"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:cursorVisible="false"
+                            android:hint="@string/msg_change"
+                            android:paddingStart="@dimen/dp10"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textStyle="bold" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_weight="1"
+                        android:elevation="@dimen/dp50"
+                        android:background="@drawable/bg_edit_input_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <EditText
+                            android:id="@+id/edit_ship"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/msg_ship"
+                            android:paddingStart="@dimen/dp10"
+                            android:onClick="onClickEditText"
+                            android:focusable="false"
+                            android:background="@color/transparent"
+                            android:textColor="@color/red"
+                            android:cursorVisible="false"
+                            android:inputType="numberDecimal"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="5"
+                    android:weightSum="4"
+                    android:padding="@dimen/dp10"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            android:id="@+id/text_one"
+                            android:text="@string/action_one"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_two"
+                            android:text="@string/action_two"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_three"
+                            android:text="@string/action_three"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_four"
+                            android:text="@string/action_four"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            android:id="@+id/text_five"
+                            android:text="@string/action_five"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_six"
+                            android:text="@string/action_six"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_seven"
+                            android:text="@string/action_seven"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_delete_all"
+                            android:text="@string/action_delete"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="#d40b00"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="4"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            android:id="@+id/text_eight"
+                            android:text="@string/action_eight"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_nine"
+                            android:text="@string/action_nine"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_zero"
+                            android:text="@string/action_zero"
+                            android:gravity="center"
+                            android:textSize="@dimen/sp30"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="@drawable/custom_item_press_abacus"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/text_exact"
+                            android:text="@string/action_exact"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:onClick="onClickAbacus"
+                            android:background="#d45c00"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:weightSum="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <ImageButton
+                            android:id="@+id/image_btn_delete"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="onClickAbacus"
+                            android:background="#df3e0d"
+                            android:src="@android:drawable/ic_input_delete"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:id="@+id/text_payment"
+                            android:text="@string/action_payment"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|normal"
+                            android:gravity="center"
+                            android:onClick="onClickAbacus"
+                            android:background="#0f9f31"
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

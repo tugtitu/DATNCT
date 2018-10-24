@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tug_pc.restaurantmanagermini">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@drawable/knight_helmet"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".avtivity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".avtivity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".avtivity.OrderActivity" />
+        <activity android:name=".avtivity.PaymentActivity" />
+        <activity android:name=".avtivity.KitchenActivity" />
+        <activity android:name=".avtivity.SaleActivity" />
+        <activity android:name=".avtivity.FoodManageActivity" />
+        <activity android:name=".avtivity.StaffManageActivity" />
+        <activity android:name=".avtivity.UpdateInformationStaffActivity" />
+        <activity android:name=".avtivity.TableManageActivity" />
+        <activity android:name=".avtivity.ReportActivity" />
+        <activity
+            android:name=".avtivity.SplashScreenLogInActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".avtivity.LoginActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/action_processing_finished"
+        android:icon="@drawable/food_and_wine"
+        app:showAsAction="always|ifRoom"
+        android:visible="true"
+        android:id="@+id/item_processing_finished" />
+
+    <item
+        android:title="@string/action_delete_multiple"
+        android:icon="@drawable/icons_delete"
+        app:showAsAction="always|ifRoom"
+        android:visible="true"
+        android:id="@+id/item_delete_multiple"/>
+
+</menu>

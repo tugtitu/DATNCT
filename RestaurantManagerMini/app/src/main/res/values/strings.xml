@@ -1,0 +1,227 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">aSa aSa</string>
+    <string name="app_general" translatable="false">Manage General Setting </string>
+    <string name="title_activity" translatable="false" tools:ignore="Typos">aSa aSa</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email" translatable="false">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="msg_nav_drawer_register">Register</string>
+    <string name="msg_nav_drawer_printer">Printer</string>
+    <string name="msg_nav_drawer_setting">Setting</string>
+    <string name="msg_nav_drawer_logout">Log out</string>
+    <string name="msg_nav_drawer_exit">Exit</string>
+    <string name="msg_super_nova_app" translatable="false">super nova app</string>
+    <string name="msg_message_alert_dialog">Email does not exist, do you want to register new ?</string>
+    <string name="title_activity_main2" translatable="false">TableActivity</string>
+    <string name="msg_nav_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="msg_nav_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_add_order">add order</string>
+    <string name="title_edit_order">edit order</string>
+    <string name="title_delete_order">delete order</string>
+    <string name="title_set_desk">set desk</string>
+    <string name="title_cancel_table_reservations">cancel table reservations</string>
+    <string name="title_activity_order" translatable="false">OrderActivity</string>
+    <string name="msg_ready_to_serve">available</string>
+    <string name="msg_have_guests">have guests</string>
+    <string name="msg_not_cleaned">not cleaned</string>
+    <string name="msg_are_processing">are processing</string>
+
+    <string name="msg_people">people</string>
+    <string name="title_staff">staff</string>
+    <string name="title_add">Add</string>
+    <string name="msg_staff_name">Staff\'s name</string>
+    <string name="msg_staff_code">Staff code (6 characters)</string>
+    <string name="action_check_register_staff">Create a login account for employees</string>
+    <string name="msg_role">Role ~</string>
+    <string name="radio_manage">Manage</string>
+    <string name="radio_cashier">Cashier</string>
+    <string name="radio_serve">Serve</string>
+    <string name="radio_warehouse_management">Warehouse Management</string>
+    <string name="msg_working_time">working time :</string>
+    <string name="msg_choose_working_hours">choose working hours</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="title_table_list">Table list</string>
+    <string name="title_food_list">Food list</string>
+    <string name="title_bill_list">Bill list</string>
+    <string name="title_call_staff">Call staff</string>
+    <string name="nav_sync_data">Sync data</string>
+    <string name="nav_shop_info">Shop info</string>
+    <string name="nav_set_up_printer">Set up printer</string>
+    <string name="nav_promotion_surcharge">Promotion,  surcharge</string>
+    <string name="nav_customer">Customer</string>
+    <string name="nav_periodic_statistics">Periodic receipt / payment</string>
+    <string name="todo" translatable="false">TODO</string>
+
+    <string name="item_sale">SALE</string>
+    <string name="item_kitchen">KITCHEN DISPLAY</string>
+    <string name="item_quick_service">QUICK SERVICE</string>
+    <string name="item_report">REPORT</string>
+    <string name="item_warehouse">WAREHOUSE</string>
+    <string name="item_payment">RECEIPT &amp; PAYMENT</string>
+    <string name="item_setting">SETTING</string>
+    <string name="title_activity_order_management" translatable="false">OrderManagementActivity</string>
+    <string name="msg_ordering">ORDERING</string>
+    <string name="msg_ordered">ORDERED</string>
+    <string name="msg_table">Table:</string>
+    <string name="msg_id" translatable="false">ID:</string>
+    <string name="msg_qty">Qty:</string>
+    <string name="msg_total">Total:</string>
+    <string name="action_payment">Payment</string>
+    <string name="action_save">Save</string>
+    <string name="action_transfer">Transfer Table</string>
+    <string name="action_merge">Merge Table</string>
+    <string name="action_booking">Booking</string>
+    <string name="action_finished_menu">Finished Menu!</string>
+    <string name="msg_was_clean">clean and ready</string>
+    <string name="action_room_rates_setting" translatable="false">Room rates setting</string>
+    <string name="action_cancel_order">Cancel order</string>
+    <string name="action_split_order">Split Order</string>
+    <string name="msg_customer">Customer</string>
+    <string name="action_create_order">Create new order</string>
+    <string name="action_print_kitchen">Print kitchen ticket</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_search">Search</string>
+    <string name="error_success">success</string>
+    <string name="error_unsuccessful">unsuccessful</string>
+
+    <string name="msg_are_you_sure">Are you sure you want to </string>
+    <string name="msg_transferM">transfer</string>
+    <string name="msg_mergeM">merge</string>
+    <string name="msg_send_require">send require ?</string>
+    <string name="msg_from">from</string>
+    <string name="msg_to">to</string>
+    <string name="msg_please_choose_the_correct">Please choose the correct desk to </string>
+    <string name="msg_select_table_to">Select table to</string>
+
+    <string name="msg_year">year</string>
+    <string name="msg_month">month</string>
+    <string name="msg_day">day</string>
+    <string name="msg_hour">hour</string>
+    <string name="msg_minute">minute</string>
+    <string name="msg_seconds">seconds</string>
+    <string name="msg_ago">ago</string>
+
+    <string name="action_confirm_merge">Confirm Merge</string>
+    <string name="action_confirm_transfer">Confirm Transfer</string>
+    <string name="action_you_can_not">You can not merge an empty order</string>
+
+    <string name="msg_note" translatable="false">~~~</string>
+    <string name="title_note_dialog">Enter a note for the item:</string>
+
+    <string name="msg_cancel">cancel ?</string>
+    <string name="msg_create">create ?</string>
+
+    <string name="msg_ship" translatable="false">Phí ship</string>
+    <string name="msg_into_money">Into money</string>
+    <string name="msg_surcharge">Surcharge</string>
+    <string name="msg_discount">Discount</string>
+    <string name="msg_cash">Cash</string>
+    <string name="msg_change">Change</string>
+    <string name="msg_current_total">Current total</string>
+    <string name="action_exact">EXACT</string>
+    <string name="action_input_percent" translatable="false">%</string>
+    <string name="action_input_vnd" translatable="false">VNĐ</string>
+
+    <string name="action_one" translatable="false">1</string>
+    <string name="action_two" translatable="false">2</string>
+    <string name="action_three" translatable="false">3</string>
+    <string name="action_four" translatable="false">4</string>
+    <string name="action_five" translatable="false">5</string>
+    <string name="action_six" translatable="false">6</string>
+    <string name="action_seven" translatable="false">7</string>
+    <string name="action_eight" translatable="false">8</string>
+    <string name="action_nine" translatable="false">9</string>
+    <string name="action_zero" translatable="false">0</string>
+
+    <string name="msg_notification">notification</string>
+    <string name="msg_message_warning" translatable="false">Vượt quá số tiền để giảm của bill</string>
+    <string name="msg_warning" translatable="false">Vượt quá số tiền tối đa bạn có thể nhập</string>
+
+    <string name="msg_name">Name ~ </string>
+    <string name="msg_quantity_and_price">Quantity and Price ~</string>
+    <string name="msg_x" translatable="false">X</string>
+    <string name="msg_equal" translatable="false">=</string>
+    <string name="action_dot" translatable="false">.</string>
+    <string name="action_del" translatable="false">Del</string>
+    <string name="msg_email_default" translatable="false">tugtitu@gmail.com</string>
+    <string name="msg_password_default" translatable="false">123456</string>
+    <string name="msg_bar" translatable="false">Bếp / Bar</string>
+    <string name="msg_loading" translatable="false">Loading …</string>
+    <string name="action_menu">Menu</string>
+    <string name="action_staff">Staff</string>
+    <string name="msg_food_name">Food Name ~</string>
+    <string name="msg_price_and_promotions">Price and Promotions ~</string>
+    <string name="msg_price">Price</string>
+    <string name="msg_promotions">Promotions</string>
+    <string name="del" translatable="false">Delete ?</string>
+    <string name="error_empty">This item cannot leave empty!</string>
+    <string name="minimum">The minimum value is 1000 vnd!</string>
+    <string name="msg_kind_food_name">Kind Food Name ~</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_add">+ Add …</string>
+    <string name="msg_phone_number">Phone Number ~</string>
+    <string name="msg_address">Address ~</string>
+    <string name="msg_edit_staff">Edit staff …</string>
+    <string name="msg_add_staff">Add new staff …</string>
+    <string name="action_change_password">Change Password</string>
+    <string name="msg_from2">From: </string>
+    <string name="msg_come">Come: </string>
+    <string name="msg_main_page">Main Page</string>
+    <string name="msg_weekdays">Weekdays</string>
+    <string name="msg_monday">Monday</string>
+    <string name="msg_tuesday">Tuesday</string>
+    <string name="msg_wednesday">Wednesday</string>
+    <string name="msg_thursday">Thursday</string>
+    <string name="msg_friday">Friday</string>
+    <string name="msg_saturday">Saturday</string>
+    <string name="msg_sunday">Sunday</string>
+    <string name="msg_title_add_table">ADD TABLE …</string>
+    <string name="msg_title_edit_table" translatable="false">EDIT TABLE …</string>
+    <string name="action_table">Table</string>
+    <string name="msg_area">Area ~</string>
+    <string name="msg_title_add_area">ADD AREA …</string>
+    <string name="msg_title_add_kind_food">ADD KING_FOOD …</string>
+    <string name="msg_title_edit_kind_food">EDIT KING_FOOD …</string>
+    <string name="msg_title_edit_area">EDIT AREA …</string>
+    <string name="msg_to2" translatable="false">To:</string>
+    <string name="msg_total_price">Total price:</string>
+    <string name="msg_guest_money">Guest money:</string>
+    <string name="msg_refunds">Refunds:</string>
+    <string name="msg_discount2">Discount:</string>
+    <string name="msg_surcharge2">Surcharge:</string>
+    <string name="msg_money_ship">Money ship:</string>
+    <string name="action_empty">Empty</string>
+    <string name="msg_date">Date:</string>
+    <string name="msg_billing_staff">Billing staff:</string>
+    <string name="msg_title_add_food">ADD FOOD …</string>
+    <string name="msg_title_edit_food">EDIT FOOD …</string>
+    <string name="msg_choose_time" translatable="false">Chọn thời gian của bạn</string>
+    <string name="action_time" translatable="false">Thời gian</string>
+    <string name="action_cancel_booking" translatable="false">Hủy đặt bàn</string>
+    <string name="msg_customer_phone_number">Customer phone number!</string>
+    <string name="action_contact">Make a call to:</string>
+    <string name="msg_see">See</string>
+    <string name="msg_by_day">By day</string>
+    <string name="msg_by_food">By food</string>
+    <string name="action_processing_finished">Processing finished</string>
+    <string name="action_delete_multiple">Delete Multiple</string>
+    <string name="prompt_confirm_password">Confirm password</string>
+    <string name="msg_there_are_currently_no_requirements">There are currently no requirements!</string>
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fcfcfc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".avtivity.UpdateInformationStaffActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_title_working_time"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <View
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/green_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/msg_name"
+                    android:lines="1"
+                    android:textColor="@color/black"
+                    android:inputType="text|textAutoCorrect|textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_input_weekdays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/msg_weekdays"
+                    android:gravity="start"
+                    android:lines="3"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:textColor="@color/black"
+                    android:inputType="textMultiLine|textAutoCorrect|textCapWords" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp20"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:paddingStart="@dimen/dp20"
+                android:paddingEnd="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/msg_from2"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView android:id="@+id/text_from_time"
+                    android:background="@drawable/bg_edittext"
+                    android:textAlignment="textStart"
+                    android:paddingStart="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp2"
+                    android:layout_weight="8"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp20"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:paddingStart="@dimen/dp20"
+                android:paddingEnd="@dimen/dp20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/msg_come"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView android:id="@+id/text_come_time"
+                    android:background="@drawable/bg_edittext"
+                    android:textAlignment="textStart"
+                    android:paddingStart="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp2"
+                    android:layout_weight="8"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp25"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:text="@string/action_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp30"
+                    style="?android:attr/buttonBarStyle"
+                    android:background="@drawable/custom_item_press_abacus" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:text="@string/action_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp30"
+                    style="?android:attr/buttonBarStyle"
+                    android:background="@drawable/custom_item_press_abacus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

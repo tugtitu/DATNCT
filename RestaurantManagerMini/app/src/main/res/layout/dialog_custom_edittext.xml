@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dp15"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_input"
+            android:inputType="number"
+            android:background="@drawable/bg_edittext"
+            android:textColor="@color/pink_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="LabelFor" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:text="@string/action_ok"
+            android:background="@color/white"
+            android:layout_toStartOf="@id/btn_cancel"
+            android:textColor="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:text="@string/action_cancel"
+            android:background="@color/white"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_below="@id/input_layout_edit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--tools:ignore="ObsoleteLayoutParam">-->
+
+        <!--&lt;!&ndash;<RadioGroup&ndash;&gt;-->
+            <!--&lt;!&ndash;android:checkedButton="@+id/offer"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/toggle"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="@dimen/dp15"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginBottom="@dimen/dp15"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginLeft="@dimen/dp70"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginRight="@dimen/dp70"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@drawable/pink_out_line"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<RadioButton&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/onn"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingTop="@dimen/dp5"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingBottom="@dimen/dp5"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginStart="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/toggle_widget_background"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:button="@null"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="@string/action_input_percent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/white" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<RadioButton&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/offer"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingTop="@dimen/dp5"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:paddingBottom="@dimen/dp5"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginEnd="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/toggle_widget_background"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:button="@null"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="@string/action_input_vnd"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/white" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</RadioGroup>&ndash;&gt;-->
+
+        <!--<View-->
+            <!--android:id="@+id/view"-->
+            <!--android:layout_marginTop="@dimen/dp6"-->
+            <!--android:layout_marginBottom="@dimen/dp20"-->
+            <!--android:background="@color/grey"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp4"/>-->
+
+    <!--</RelativeLayout>-->
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_manager_res_child"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".avtivity.FoodManageActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize"
+        android:paddingBottom="?attr/actionBarSize">
+
+        <fragment
+            android:id="@+id/fragment_category"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            tools:layout="@layout/fragment_category"
+            class="com.example.tug_pc.restaurantmanagermini.fragment.CategoryFragment"/>
+
+        <fragment
+            android:id="@+id/fragment_child_in_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_child_in_category"
+            android:layout_marginBottom="@dimen/dp60"
+            class="com.example.tug_pc.restaurantmanagermini.fragment.ChildFragment"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_ac_btn_exit"
+        android:src="@drawable/exit"
+        app:fabSize="normal"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        app:layout_anchor="@id/linear"
+        app:layout_anchorGravity="bottom|left|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/green"/>
+</android.support.design.widget.CoordinatorLayout>

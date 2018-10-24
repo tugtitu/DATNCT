@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/action_transfer"
+        android:icon="@drawable/switch_32"
+        app:showAsAction="always|ifRoom"
+        android:visible="true"
+        android:id="@+id/item_transfer" />
+
+    <item
+        android:title="@string/action_merge"
+        android:icon="@drawable/merge_32"
+        app:showAsAction="always|ifRoom"
+        android:visible="true"
+        android:id="@+id/item_merge"/>
+
+    <item
+        android:title="@string/action_booking"
+        android:icon="@drawable/table"
+        app:showAsAction="always|ifRoom"
+        android:visible="true"
+        android:id="@+id/item_booking" />
+
+    <!--<item-->
+        <!--android:title="@string/action_finished_menu"-->
+        <!--android:icon="@drawable/food"-->
+        <!--app:showAsAction="always|ifRoom"-->
+        <!--android:visible="true"-->
+        <!--android:id="@+id/item_finished_menu"/>-->
+
+    <item
+        android:title="@string/action_time"
+        android:icon="@drawable/clock_color"
+        app:showAsAction="always|ifRoom"
+        android:visible="false"
+        android:id="@+id/item_time"/>
+
+    <item
+        android:title="@string/action_contact"
+        android:icon="@drawable/call"
+        app:showAsAction="always|ifRoom"
+        android:visible="false"
+        android:id="@+id/item_contact"/>
+
+</menu>

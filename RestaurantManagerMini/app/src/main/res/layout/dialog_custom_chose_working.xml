@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp10"
+    android:paddingEnd="@dimen/dp10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/text_action_edit_working_time"
+            android:text="@string/action_edit"
+            android:textStyle="bold"
+            android:padding="@dimen/dp15"
+            android:textColor="@color/green_dark"
+            android:gravity="end|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:text="@string/msg_choose_working_hours"
+            android:textStyle="bold"
+            android:padding="@dimen/dp15"
+            android:textColor="@color/grey"
+            android:gravity="start|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/text_action_edit_working_time"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/linear_time_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/text_weekdays"
+            android:textAlignment="textStart"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/text_time_work"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <TextView android:id="@+id/text_time_work"
+            android:textAlignment="textEnd"
+            android:paddingStart="@dimen/dp2"
+            android:paddingEnd="@dimen/dp5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp2" />
+
+    <Button android:id="@+id/btn_confirm"
+        android:text="@string/action_ok"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/custom_item_press_abacus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_gravity="center" />
+
+</LinearLayout>

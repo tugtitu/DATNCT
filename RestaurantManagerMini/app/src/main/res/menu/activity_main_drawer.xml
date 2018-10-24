@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/feature_items"
+        android:menuCategory="container"
+        android:checkableBehavior="none">
+        <!--<item android:id="@+id/item_sync_data"-->
+            <!--android:title="@string/nav_sync_data"-->
+            <!--android:icon="@drawable/sync_data"/>-->
+        <!--<item android:id="@+id/item_shop_info"-->
+            <!--android:title="@string/nav_shop_info"-->
+            <!--android:icon="@drawable/store_32"/>-->
+        <!--<item android:id="@+id/item_set_up_printer"-->
+            <!--android:title="@string/nav_set_up_printer"-->
+            <!--android:icon="@drawable/printer"/>-->
+        <!--<item android:id="@+id/item_promotions"-->
+            <!--android:title="@string/nav_promotion_surcharge"-->
+            <!--android:icon="@drawable/promotions"/>-->
+        <!--<item android:id="@+id/item_customer"-->
+            <!--android:title="@string/nav_customer"-->
+            <!--android:icon="@drawable/customer_32"/>-->
+        <!--<item android:id="@+id/item_periodic_statistics"-->
+            <!--android:title="@string/nav_periodic_statistics"-->
+            <!--android:icon="@drawable/money"/>-->
+        <item android:id="@+id/item_logout"
+            android:title="@string/msg_nav_drawer_logout"
+            android:icon="@drawable/exit"/>
+    </group>
+</menu>

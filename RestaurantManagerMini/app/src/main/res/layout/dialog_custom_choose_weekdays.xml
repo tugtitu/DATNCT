@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dp10"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:text="@string/msg_weekdays"
+        android:background="#5bd9c6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp20"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <CheckBox android:id="@+id/checkbox_monday"
+            android:text="@string/msg_monday"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/checkbox_tuesday"
+            android:text="@string/msg_tuesday"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/checkbox_wednesday"
+            android:text="@string/msg_wednesday"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/checkbox_thursday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dp2"
+            android:paddingStart="@dimen/dp20"
+            android:text="@string/msg_thursday" />
+
+        <CheckBox android:id="@+id/checkbox_friday"
+            android:text="@string/msg_friday"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/checkbox_saturday"
+            android:text="@string/msg_saturday"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/checkbox_sunday"
+            android:text="@string/msg_sunday"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp25"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:text="@string/action_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp30"
+            style="?android:attr/buttonBarStyle"
+            android:background="@drawable/custom_bg_text_view_add_fast_dialog" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:text="@string/action_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp30"
+            style="?android:attr/buttonBarStyle"
+            android:background="@drawable/custom_bg_text_view_add_fast_dialog" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_toStartOf="@id/image_btn_item"
+        android:layout_margin="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <HorizontalScrollView
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_quantity"
+                android:text="1"
+                android:textSize="@dimen/sp20"
+                android:textColor="#ff6016"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_weight="5.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_name_food"
+                android:textColor="#ff6016"
+                android:gravity="start|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_total"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="100."
+                android:textColor="#ff6016"
+                android:textStyle="bold" />
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <View
+        android:background="#c9c1b4b4"
+        android:layout_below="@id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1" />
+</RelativeLayout>

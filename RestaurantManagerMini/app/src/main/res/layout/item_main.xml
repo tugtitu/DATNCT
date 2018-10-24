@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearItemMain"
+    android:padding="@dimen/dp15"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp60"
+    android:layout_marginEnd="@dimen/dp60"
+    android:background="@drawable/item_main_custom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_item_main"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/image_icon_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/dp10"
+        app:srcCompat="@drawable/knight_helmet"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/text_item_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/todo"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_toStartOf="@id/image_icon_main"
+        android:layout_toEndOf="@id/image_item_main"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_centerInParent="true"
+        android:textStyle="bold|italic" />
+</RelativeLayout>

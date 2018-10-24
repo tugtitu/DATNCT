@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:id="@+id/linear_area"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_kind_food"
+        android:padding="@dimen/dp5"
+        android:background="@drawable/custom_item_kind_food"
+        android:layout_margin="@dimen/dp1"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

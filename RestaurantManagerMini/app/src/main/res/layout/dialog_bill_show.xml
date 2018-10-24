@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp15"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_title_bill"
+            android:text="Title Bill"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp20"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/text_address_bill"
+            android:text="Address Bill"
+            android:textStyle="normal"
+            android:textSize="@dimen/sp15"
+            android:gravity="center"
+            android:layout_below="@id/text_title_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/text_phone_bill"
+            android:text="Phone number Bill"
+            android:textStyle="normal"
+            android:textSize="@dimen/sp15"
+            android:gravity="center"
+            android:layout_below="@id/text_address_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View android:id="@+id/view"
+            android:background="@color/green"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_below="@id/text_phone_bill"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"/>
+
+        <TextView
+            android:id="@+id/bill"
+            android:text="Hóa Đơn"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp20"
+            android:textColor="@color/green"
+            android:gravity="center"
+            android:layout_below="@id/view"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/linear_date"
+            android:orientation="horizontal"
+            android:layout_below="@id/bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Ngày: "
+                android:textStyle="bold"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:text="5/25/2018"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_bill"
+            android:padding="@dimen/dp10"
+            android:layout_below="@id/linear_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp300">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/linear_bill"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:weightSum="10"
+            android:layout_below="@id/recycler_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/text_total_price"
+                android:text="100.000"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp20"
+                android:visibility="gone"
+                android:textAlignment="textStart"
+                android:textColor="@color/green_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout android:id="@+id/linear_bill_child1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:gravity="start"
+                android:layout_marginEnd="@dimen/dp15"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/msg_total_price"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/msg_guest_money"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/msg_refunds"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/msg_discount2"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/msg_surcharge2"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/msg_money_ship"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/linear_bill_child2"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView android:id="@+id/text_bill_total_price"
+                    android:text="100.000"
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_bill_cash"
+                    android:text="100.000"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_bill_change"
+                    android:text="0"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_bill_discount"
+                    android:text="-0"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_bill_surcharge"
+                    android:text="+0"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_bill_ship"
+                    android:text="+0"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/green_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View android:id="@+id/view_w"
+            android:background="@color/green"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_below="@id/linear_bill"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"/>
+
+        <TextView
+            android:id="@+id/text_customer"
+            android:text="Khách hàng: "
+            android:textStyle="normal"
+            android:layout_below="@id/view_w"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_customer_name"
+            android:text=""
+            android:textStyle="normal"
+            android:textSize="@dimen/sp18"
+            android:layout_below="@id/view_w"
+            android:layout_toEndOf="@id/text_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View android:id="@+id/view_w_w"
+            android:background="@color/green"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_below="@id/text_customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"/>
+
+        <TextView android:id="@+id/btn_in"
+            android:text="In phiếu"
+            android:textStyle="normal|italic"
+            android:textSize="@dimen/sp18"
+            android:layout_below="@id/view_w_w"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/btn_intent"
+            android:text="Xác nhận!"
+            android:textStyle="bold|italic"
+            android:textSize="@dimen/sp18"
+            android:layout_below="@id/view_w_w"
+            android:layout_toEndOf="@id/btn_in"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</ScrollView>

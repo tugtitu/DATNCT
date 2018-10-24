@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:id="@+id/linear_area"
+    android:layout_marginBottom="@dimen/dp5"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/text_areaT"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/bg_item_area_manage"
+        android:layout_margin="@dimen/dp3"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</LinearLayout>

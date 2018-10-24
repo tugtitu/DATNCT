@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".avtivity.StaffManageActivity">
+
+    <LinearLayout android:id="@+id/linear"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@drawable/bg_staff_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingStart="@dimen/dp20"
+                android:paddingEnd="@dimen/dp5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/image_btn_edit">
+
+                <TextView android:id="@+id/text_staff_root_name"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_staff_root_address"
+                    android:textStyle="italic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView android:id="@+id/text_staff_root_phone"
+                    android:textStyle="italic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/image_btn_edit"
+                android:src="@drawable/edit"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo" />
+
+        </RelativeLayout>
+
+        <fragment
+            android:id="@+id/fragment_child_in_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_child_in_category"
+            class="com.example.tug_pc.restaurantmanagermini.fragment.ChildFragment"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_ac_btn_exit"
+        android:src="@drawable/exit"
+        app:fabSize="normal"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        app:layout_anchor="@id/linear"
+        app:layout_anchorGravity="bottom|left|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/green"/>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/dp5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedAttribute">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_input_name_food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/msg_name"
+            android:inputType="text|textMultiLine|textAutoCorrect|textCapWords" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_quantity_and_price"
+        android:textSize="@dimen/sp24"
+        android:textStyle="bold"
+        android:text="@string/msg_quantity_and_price"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_below="@id/layout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear_input_quantity_and_price"
+        android:layout_below="@id/text_quantity_and_price"
+        android:layout_marginTop="@dimen/dp15"
+        android:orientation="horizontal"
+        android:weightSum="12"
+        android:elevation="@dimen/dp100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="LabelFor">
+
+        <TextView
+            android:id="@+id/text_quantity"
+            android:text="@string/action_one"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:onClick="onClickEdit"
+            android:background="@drawable/custom_bg_edit_text_add_fast_dialog"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/msg_x"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_price"
+            android:text="@string/action_one"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:onClick="onClickEdit"
+            android:background="@drawable/custom_bg_edit_text_add_fast_dialog"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/msg_equal"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_total"
+            android:text="@string/action_one"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:background="@drawable/custom_bg_edit_text_add_fast_dialog"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_abacus"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp5"
+        android:layout_below="@id/linear_input_quantity_and_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_one"
+                android:text="@string/action_one"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_two"
+                android:text="@string/action_two"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_three"
+                android:text="@string/action_three"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_four"
+                android:text="@string/action_four"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_five"
+                android:text="@string/action_five"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_six"
+                android:text="@string/action_six"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_seven"
+                android:text="@string/action_seven"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_eight"
+                android:text="@string/action_eight"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_nine"
+                android:text="@string/action_nine"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_zero"
+                android:text="@string/action_zero"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_dot"
+                android:text="@string/action_dot"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/text_del"
+                android:text="@string/action_del"
+                android:gravity="center"
+                android:textSize="@dimen/sp30"
+                android:textStyle="bold"
+                android:onClick="onClick_abacus"
+                android:background="@drawable/custom_bg_text_view_add_fast_dialog"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/linear_abacus"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:text="@string/action_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@drawable/custom_bg_text_view_add_fast_dialog" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:text="@string/action_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:background="@drawable/custom_bg_text_view_add_fast_dialog" />
+    </LinearLayout>
+</RelativeLayout>

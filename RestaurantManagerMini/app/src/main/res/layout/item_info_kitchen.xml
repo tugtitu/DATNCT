@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:background="@drawable/bg_item_kitchen"
+    android:layout_marginBottom="@dimen/dp10"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_weight="8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/text_food_name"
+            android:text="Food name"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/dark_orange"
+            android:textStyle="bold"
+            android:layout_toStartOf="@id/text_quantity"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/text_quantity"
+            android:text="1"
+            android:textStyle="bold"
+            android:textColor="@color/dark_orange"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/ckb_processing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/ckb_processing"
+            android:checked="false"
+            android:layout_margin="@dimen/dp10"
+            android:button="@drawable/checkbox_selector"
+            android:background="@drawable/bg_btn_processing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <TextView android:id="@+id/btn_tra_mon_child"
+        android:text="Trả món"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/dp5"
+        android:background="@drawable/bg_btn_tramon"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp3"
+        android:paddingEnd="@dimen/dp3"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

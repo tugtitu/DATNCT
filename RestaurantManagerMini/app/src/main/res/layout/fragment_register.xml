@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp16"
+    android:id="@+id/scroll_register"
+    tools:context=".avtivity.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyle" />
+
+        <LinearLayout
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp40"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/fly_icon_96"
+                android:contentDescription="@string/todo" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="@dimen/dp20"
+                android:maxLines="1"
+                android:nextFocusUp="@id/edit_email"
+                android:nextFocusLeft="@id/edit_email"
+                android:backgroundTint="@color/white"
+                android:singleLine="true"
+                android:inputType="textEmailAddress|textAutoCorrect|textCapWords"
+                tools:targetApi="lollipop" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/password_icon"
+                android:drawablePadding="@dimen/dp20"
+                android:maxLines="1"
+                android:backgroundTint="@color/white"
+                android:singleLine="true"
+                android:inputType="textPassword|textAutoCorrect|textCapWords"
+                tools:targetApi="lollipop" />
+
+            <EditText
+                android:id="@+id/edit_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_confirm_password"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/password_icon"
+                android:drawablePadding="@dimen/dp20"
+                android:maxLines="1"
+                android:backgroundTint="@color/white"
+                android:singleLine="true"
+                android:inputType="textPassword|textAutoCorrect|textCapWords"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/button_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:background="@drawable/bg_transparent"
+                android:text="@string/action_sign_in"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
